@@ -1,0 +1,46 @@
+body{
+  background-color: black;
+}
+.round-button {
+  background-color: rgb(46, 43, 43);
+  color: white;
+  border: none;
+  border-radius: 40px;
+  height: 60px;
+  width: 60px;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.yellow-round-button{
+  background-color: rgb(255, 179, 0);
+  color: white;
+  border: none;
+  border-radius: 40px;
+  height: 70px;
+  width: 70px;
+  font-weight: bold;
+  font-size: 25px;
+
+}
+
+.clear-button {
+  background-color: rgb(46, 43, 43);
+  color: white;
+  border: none;
+  border-radius: 40px;
+  height: 60px;
+  width: 60px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.calculation-result{
+  color: white;
+  font-weight: bold;
+  font-size: 40px;
+  font-family: Arial;
+  margin-bottom: 30px;
+}
+
+

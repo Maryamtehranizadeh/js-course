@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <button onclick="
+      message++;
+      ">Add</button>
+    <button onclick="
+      if (message === 0){
+        message = message;
+      } else {
+        message--;
+      }
+      
+    ">Remove</button>
+
+    <script>
+      let message = 0;
+      setInterval(() => {
+        document.title = `${message} New Messages`;
+        message++;
+      }, 1000);
+    </script>
+  </body>
+</html>

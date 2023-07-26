@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <button class="js-button">Start </button>
+
+    <button class="js-add-button">Add to cart</button>
+    
+    <script>
+      const add = function() {
+        console.log(2+3);
+      }
+      add();
+      add();
+
+      let fun = function(){
+          console.log('12b');
+        }
+
+      function runTwice(fun) {
+        fun();
+        fun();
+      }
+      runTwice(fun);
+
+      runTwice(add);
+
+
+       
+        const button = document.querySelector('.js-button');
+        button.addEventListener('click' , function(){
+        button.innerHTML = 'Loading...';
+       
+        setTimeout(() => {
+          button.innerHTML='Finished!';
+        }, 1000);
+
+      });
+
+      let timeoutId;
+      const addButton = document.querySelector('.js-add-button');
+      
+      addButton.addEventListener( 'click', function () {
+
+        addButton.innerHTML = 'Added';
+        
+        clearTimeout(timeoutId);
+
+        timeoutId = setTimeout(() => {
+          addButton.innerHTML = 'Add to cart';
+        },2000);
+
+        // timeoutId();
+        // this should be necessary but the code works without it, how??
+        });
+
+        
+
+    </script>
+  </body>
+</html>

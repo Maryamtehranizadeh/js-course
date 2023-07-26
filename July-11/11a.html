@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <script>
+
+      const nums = [10, 20, 30];
+      nums[2] = 99;
+      console.log(nums);
+
+      function getLastArrayValue(nums) {
+        console.log(nums[nums.length-1]);
+      }
+
+      
+
+      getLastArrayValue(nums);
+      getLastArrayValue([1, 20, 33, 67, 9]);
+      getLastArrayValue(['hi', 'hello', 'good']);
+
+
+      function arraySwap(nums) {
+        const numsFirst = nums[0];
+        const numsLast = nums[nums.length-1];
+        nums.splice(0,1,numsLast);
+        nums.splice(nums.length-1 , 1, numsFirst);
+        nums[0] = numsLast;
+        nums[nums.length-1] = numsFirst;
+        console.log(nums);
+      }
+      arraySwap(nums);
+      arraySwap([1,20,33,90,47,80,99]);
+      arraySwap(['hi', 'hello', 'good']);
+
+    </script>
+  </body>
+</html>

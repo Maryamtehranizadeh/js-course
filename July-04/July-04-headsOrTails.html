@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+  <head>
+    <title>Heasds or Tails</title>
+
+  </head>
+
+  <body>
+
+    <button onclick="
+      playGame('heads');
+    "> Heads</button>
+
+
+    <button onclick="
+      playGame('tails');
+    ">Tails</button>
+
+    <button onclick="
+      console.log(` Wins: ${score.wins}, Losses: ${score.losses}`);
+    ">score</button>
+
+    <button onclick="
+      score.wins = 0;
+      score.losses = 0;
+      console.log('Score Reset.');
+    ">Reset Score</button>
+
+
+    <script>
+
+      let score = {
+          wins : 0,
+          losses : 0
+        }
+
+      if (localStorage.getItem('score')) {
+          score = JSON.parse(localStorage.getItem('score'));
+      }
+
+      let outcome = '';
+      const guess = '';
+      function playGame(guess) {
+        const randomNumber = Math.random();
+          if (randomNumber < 0.5) {
+            result = 'heads';
+          } else { 
+            result = 'tails';
+          } 
+          
+          if (result === guess) {
+            score.wins +=1;
+            outcome = 'You win!';
+          } else {
+            score.losses +=1;
+            outcome = 'You lose!'; 
+          }
+
+          localStorage.setItem('score', JSON.stringify(score));
+          alert(`${outcome}, Wins: ${score.wins} , Losses: ${score.losses} `); 
+      }
+    
+    </script>
+
+  </body>
+</html>

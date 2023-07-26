@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+  <head>
+    <title>Heasds or Tails</title>
+
+  </head>
+
+  <body>
+
+    <button onclick="
+      playGame('heads') 
+        if (result === guess) {
+          console.log('You win!');
+        } else {
+          console.log('You lose!');
+        }
+      
+      "> Heads</button>
+
+
+    <button onclick="
+      playGame('tails');
+      if (result === guess) {
+          console.log('You lose!');
+        } else {
+          console.log('You win!');
+        }
+    ">Tails</button>
+
+
+    <script> 
+      let playerMove = ''
+      const guess = 'heads';
+      function playGame(playerMove) {
+        const randomNumber = Math.random();
+          if (randomNumber < 0.5) {
+            result = 'heads';
+          } else { 
+            result = 'tails';
+          }   
+      }
+    
+    </script>
+
+  </body>
+</html>

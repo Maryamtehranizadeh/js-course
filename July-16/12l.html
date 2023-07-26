@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <script>
+      // we did not define num, how does this code work??
+
+      // function countPos(nums) {
+      //   let count = 0;
+      //   nums.forEach((num) => {
+      //     if (num > 0) {
+      //       count++; 
+      //     }
+      //   })
+      //   return count;
+      // }
+      // console.log(countPos([2, -9, 8, -7, 6, 5, 4]));
+
+
+      // function removeEgg(food){
+      //   return food.filter((food) => food !== 'egg');
+      // }
+
+      // console.log(removeEgg(['ham', 'egg', 'milk', 'egg', 'egg', 'bread']));
+
+      function remove2Eggs(food) {
+        let removedEgg = 0;
+
+        return food.filter((food) => {if (food === 'egg' && removedEgg < 2) {
+          removedEgg++;
+          return false;
+        } 
+        
+        return true;
+        });
+      }
+
+      console.log(remove2Eggs(['ham', 'egg', 'milk', 'egg', 'egg', 'bread']));
+
+
+    </script>
+  </body>
+</html>

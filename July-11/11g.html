@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <script>
+
+      let array = [1,2,3];
+      for (let i = 0; i < 3; i++) {
+        array[i] = array [i] + 1;
+      }
+      console.log(array);
+
+      function addOneArray(array) {
+        for (let i = 0; i < array.length; i++) {
+           array[i] += 1; 
+        }
+        console.log(array);
+      }
+
+      addOneArray([10,19,12,13]);
+      addOneArray([-2,99,101,1000]);
+
+    function addArrayNum(array,num) {
+      for (i=0; i< array.length; i++) {
+        array[i] += num;
+      }
+      console.log(array);
+    }
+
+    addArrayNum([10,19,12,13], 10);
+
+    function add2Arrays(array1,array2) {
+      for (let i=0; 
+           i< array1.length;
+           i++) {
+          
+          array1[i] = array2[i] + array1[i];
+      }
+      console.log(array1); 
+    }
+
+    add2Arrays([5,101,10],[10,70,79]);
+      
+
+     </script>
+  </body>
+</html>
